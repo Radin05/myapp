@@ -7,8 +7,12 @@ class NewsContainer extends StatelessWidget {
       width: double.infinity,
       padding: EdgeInsets.all(16.0),
       decoration: BoxDecoration(
-        border: Border.all(color: Colors.grey),
-        borderRadius: BorderRadius.circular(8.0),
+        image: DecorationImage(
+          image: AssetImage(
+            'assets/images/bg.jfif'
+            ),
+          fit: BoxFit.cover,
+          ),
       ),
       child: Container(
         child: Stack(
@@ -21,7 +25,7 @@ class NewsContainer extends StatelessWidget {
                 height: 200.0,
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: NetworkImage('https://picsum.photos/200/300'),
+                    image: NetworkImage('https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p2/01/2024/01/14/FOTOPROFILJPG-2006813446.jpg'),
                     fit: BoxFit.cover,
                   ),
                   borderRadius: BorderRadius.circular(8.0),

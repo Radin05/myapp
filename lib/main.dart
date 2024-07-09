@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/container_widget.dart';
+import 'package:myapp/row_column/biodata.dart';
+import 'package:myapp/row_column/column_widget.dart';
+import 'package:myapp/row_column/row_column.dart';
+import 'package:myapp/row_column/row_widget.dart';
+import 'package:myapp/row_column/tes.dart';
 import 'news_container.dart';
 
 void main() {
@@ -13,13 +18,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Color.fromARGB(255, 185, 180, 180),
         appBar: AppBar(
-          title: Text('Flutter'),
+          title: Text('BIODATA'),
           centerTitle: true,
-          backgroundColor: Colors.greenAccent,
+          backgroundColor: const Color.fromARGB(255, 166, 255, 212),
         ),
-        body: NewsContainer(),
+        body: Biodata(),
       ),
     );
   }
