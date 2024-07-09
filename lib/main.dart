@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:myapp/container_widget.dart';
+import 'news_container.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,23 +13,32 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-// Suggested code may be subject to a license. Learn more: ~LicenseLog:1772599991.
         backgroundColor: Colors.teal,
         appBar: AppBar(
-          title: Text('I am Radin'),
+          title: Text('Flutter'),
           centerTitle: true,
           backgroundColor: Colors.greenAccent,
         ),
-        body: Center(
-          child: Text(
-            'hello world',
-            style: TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-              backgroundColor: Colors.black
-            ),
-          ),
+        body: NewsContainer(),
+      ),
+    );
+  }
+}
+
+class TextWidget extends StatelessWidget {
+  const TextWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Text(
+        'Hello World',
+        style: TextStyle(
+          fontSize: 24,
+          color: Colors.white,
+          fontWeight: FontWeight.bold,
         ),
       ),
     );
